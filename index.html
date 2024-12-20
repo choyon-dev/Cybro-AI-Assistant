@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="header-left">
+                    <h2>Cybro AI Assistant</h2>
+                </div>
+                <div class="header-icons">
+                    <button id="clear-chat" title="Clear Chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button id="toggle-sound" title="Toggle Sound">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Settings Panel -->
+            <div id="settings-panel" class="settings-panel hidden">
+                <h3>System Prompt</h3>
+                <textarea id="system-prompt" placeholder="Enter system prompt..."></textarea>
+                <button id="save-settings">Save</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="input-area">
+                <div class="attachment-preview" id="attachment-preview"></div>
+                <div class="input-container">
+                    <label for="file-upload" class="file-upload-label">
+                        <i class="fas fa-paperclip"></i>
+                    </label>
+                    <input type="file" id="file-upload" accept="image/*,.pdf,.doc,.docx" hidden>
+                    <textarea id="user-input" placeholder="Type your message..."></textarea>
+                    <button id="send-btn" type="button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="message-sound" src="assets/massage.mp3" preload="auto"></audio>
+    <script src="index.js"></script>
+</body>
+</html>
